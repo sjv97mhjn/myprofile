@@ -22,7 +22,7 @@ app.get('/',function(req,res){
 	res.render("main.ejs");
 	//console.log(process.env.PORT);
 })
-app.get('/showblog/1234',function(req,res){
+app.get('/showblog/1234/a',function(req,res){
 	blog.find( {},function(err,blogs){
 		if(err){
 			console.log(err);
