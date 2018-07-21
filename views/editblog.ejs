@@ -1,0 +1,12 @@
+
+<script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
+<%-blog.content%>
+<form class="" action="/editblog" method="post">
+ <textarea name="content" value="<%= blog.content%>"></textarea>
+  <button type="submit" name="button">Submit</button>
+
+  <input type="hidden" name="id" value="<%=blog._id%>">
+</form>
+    <script>
+        CKEDITOR.replace( 'content' );
+    </script>

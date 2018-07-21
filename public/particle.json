@@ -1,0 +1,48 @@
+{
+	"particles":{
+		"number":{
+			"value":100
+				},
+
+		"color":{
+			"value":"random"
+				},
+
+		"shape":{
+			"type":"circle",
+			"stroke":{
+						"width":3,
+						"color":" #14e79d"
+					}
+
+				},
+
+		"opacity":{
+				"value":1
+
+				   },
+			"size":{
+				"value":2
+					},
+					 "line_linked": {
+      "enable": true,
+      "distance": 100,
+      "color": "#000000",
+      "opacity": 0.4,
+      "width": 2
+    },
+			"move":{
+				"out_mode":"bounce",
+				"speed":3
+					},
+				"straight":true,
+				"bounce":true
+	},
+	"interactivity":{
+		"events" :{
+			"onhover":{
+				"enable":true
+			}
+		}
+	}
+}

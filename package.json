@@ -1,0 +1,26 @@
+{
+  "name": "myprofile",
+  "version": "1.0.0",
+  "description": "This is like an e-commerce website for campus",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sjv97mhjn/CampusKart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjv97mhjn/CampusKart/issues"
+  },
+  "homepage": "https://github.com/sjv97mhjn/CampusKart#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "moment": "^2.22.1",
+    "mongoose": "^5.1.1"
+  }
+}

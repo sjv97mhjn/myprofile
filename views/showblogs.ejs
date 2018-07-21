@@ -1,0 +1,29 @@
+		<%include partials/header%>
+		<% blogs.forEach(function(blog){ %>
+						<br>
+							<div class="container" style="text-align:center;align:center">
+					  <div class="jumbotron"  style="max-width:800px">
+
+						<p style="color:black"><%- blog.content%><p>
+							
+							<%var d =blog.date  %>
+							<%var utc = d.getTime() + (d.getTimezoneOffset() * 60000);%>
+							<%var nd = new Date(utc + (3600000*(5.5)));%>
+							<%var n = moment(nd).format('LLLL');%>
+						<h4><%=n%></h4>
+						<a href="/editblog/<%=blog._id%>"><button class="btn btn-primary btn-lg">EDIT</button>
+						</a>
+						<a href="/deleteblog/<%=blog._id%>"><button class="btn btn-primary btn-lg">DELETE</button>
+						</a></div>
+						</div>
+						<br>
+		<% }) %>
+
+
+
+
+<style>
+h1 {
+	color:black;
+}
+</style>
