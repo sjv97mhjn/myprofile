@@ -1,6 +1,6 @@
 var express = require('express');
 var  app = express();
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 80;
 var moment = require('moment');
 mongoose = require("mongoose"),
  bodyParser = require("body-parser"),
@@ -46,7 +46,7 @@ app.get('/deleteblog/:id',function(req,res){
 		}
 		else{
 		
-			res.redirect('/showblog');
+			res.redirect('/showblog/1234/a');
 		}
 
 	}); 
@@ -80,7 +80,7 @@ app.post('/editblog',function(req,res){
 			res.send(err);
 		}
 		else{
-			res.redirect('/showblog');
+			res.redirect('/showblog/1234/a');
 		}
 	})
 		}
