@@ -1,6 +1,6 @@
 var express = require('express');
 var  app = express();
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 80;
 var moment = require('moment');
 
 mongoose = require("mongoose"),
@@ -83,7 +83,7 @@ app.get('/',function(req,res){
 	var flag=0;
 	if(req.session.user)
 		flag=1;
-	
+
 	res.render("main.ejs",{flag:flag});
 	//console.log(process.env.PORT);
 })
