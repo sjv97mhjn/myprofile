@@ -1,0 +1,38 @@
+<%include partials/header2%>
+		<br>
+		<br>
+		<div class="row">
+		<% friends.forEach(function(friend){ %>
+				
+						
+							
+						<div class='col-lg-4'>
+						<div class="container">
+					    <div class="jumbotron"  style="border: double;">
+						<h2 style="color:black"><strong><%- friend.name%></strong><h2>
+						
+						<a href="/sf/<%=friend._id%>"><button id="show" class="btn btn-primary btn-lg" >SHOW </button></a>
+						<a href="/df/<%=friend._id%>"><button class="btn btn-primary btn-lg">DELETE</button>
+						</a>
+						</div>
+							</div>
+						</div>
+						
+						
+						
+		<% }) %>
+		</div>
+						<form action="/af" method="POST">
+						<strong style="color: white;"><label>Name</label></strong>
+						<input type="text" name="name">	
+						<button class="btn btn-primary btn-lg">Add a Friend</button>
+						</form>
+
+
+
+<style>
+h1 {
+	color:black;
+}
+</style>
+

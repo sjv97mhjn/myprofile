@@ -1,0 +1,42 @@
+<%include partials/header2%>
+		<br>
+		<br>
+	
+		
+				
+						
+							
+					
+						<div class="container">
+					    <div class="jumbotron"  style="border: double;">
+						<h2 style="color:black"><strong><%- Friend.name%></strong><h2>
+						<ol>
+						<% var charr = Friend.content.split(",")%>
+						<% charr.forEach(function(ch){ %>
+							<li><p><%=ch%></p></li>
+
+
+					<%})%>
+					</ol>
+						<form action='/ef/<%=Friend._id%>' method='POST'>
+						<label>Add Charecteristic</label>
+						<br>
+						<textarea style="max-width: 400px;max-height: 100px" name="content"><%=Friend.content%></textarea>
+						<br>
+						<button>Submit</button>
+						</form>
+						<a href="/kaf"><button>Back</button></a>
+						</div>
+							</div>
+					
+						
+	
+
+
+
+<style>
+h1 {
+	color:black;
+}
+</style>
+
