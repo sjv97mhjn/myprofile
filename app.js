@@ -55,9 +55,10 @@ app.get('/loginuser',function(req,res){
 app.post('/loginuser',function(req,res){ 
 
  user.findOne({name:req.body.name},function(err,result){
- 	if(err){
+ 	if(err||result==null){
  		console.log(err);
- 	}
+		res.redirect('/') 
+	}
 		else{
 
 			if(result.password!=req.body.password){
