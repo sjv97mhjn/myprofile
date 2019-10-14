@@ -170,7 +170,7 @@ app.post('/addBlog',myLogger,function(req,res){
 			res.send(err);
 		}
 		else{
-			res.redirect('/');
+			res.redirect('/showblog');
 		}
 	})
 })
