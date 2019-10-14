@@ -88,8 +88,8 @@ app.get('/',function(req,res){
 	res.render("main.ejs",{flag:flag});
 	//console.log(process.env.PORT);
 })
-app.get('/showblog',myLogger,function(req,res){
-	blog.find( {},function(err,blogs){
+app.get('/showblog',function(req,res){
+	blog.find( {"date"  : {$gte : new Date("2019-10-11T19:42:27.197Z")}},function(err,blogs){
 		if(err){
 			console.log(err);
 			res.send(err);
