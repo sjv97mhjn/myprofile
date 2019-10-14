@@ -89,7 +89,24 @@ app.get('/',function(req,res){
 	//console.log(process.env.PORT);
 })
 app.get('/showblog',function(req,res){
-	blog.find( {"date"  : {$gte : new Date("2019-10-11T19:42:27.197Z")}},function(err,blogs){
+	blog.find( {"date"  : {$gte : new Date("2019-10-11T19:42:28.197Z")}},function(err,blogs){
+		if(err){
+			console.log(err);
+			res.send(err);
+		}
+		else{
+			console.log(blogs);
+			//var utc = blogs[0].date;
+            // var m = moment.unix(utc).tz('Asia/Kolkata').format('YYYY-MM-DD HH:mm:ss');
+			//console.log(m);
+			res.render("showblogs.ejs",{blogs:blogs,moment:moment });
+		}
+
+	}).sort({date:-1}); 
+})
+
+app.get('/showChapter1',function(req,res){
+	blog.find( {"date"  : {$lte : new Date("2019-10-11T19:42:27.197Z")}},function(err,blogs){
 		if(err){
 			console.log(err);
 			res.send(err);
